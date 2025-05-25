@@ -1,117 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amirreza Nezami – UX Designer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Saira+Semi+Condensed:wght@400;700&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --primary: #FE4D00;
-      --background: #FFFFFF;
-      --secondary-bg: #F5F6FA;
-      --text-dark: #111;
-      --text-light: #666;
-    }
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amirreza Nezami – UX Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Saira+Semi+Condensed:wght@400;700&display=swap');
+      body {
+        font-family: 'Bai Jamjuree', sans-serif;
+        background-color: #ffffff;
+      }
+      h1, h2, h3 {
+        font-family: 'Saira Semi Condensed', sans-serif;
+      }
+    </style>
+  </head>
+  <body class="text-[#121212] bg-white relative overflow-hidden">
 
-    body {
-      margin: 0;
-      font-family: 'Bai Jamjuree', sans-serif;
-      background: var(--background);
-      color: var(--text-dark);
-    }
+    <!-- Navbar -->
+    <header class="relative z-30">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button id="menu-toggle" class="text-[#FE4D00] focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+              </path>
+            </svg>
+          </button>
+        </div>
 
-    header {
-      padding: 2rem 1rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    nav {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 2rem;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 1rem;
-      font-weight: 600;
-    }
-
-    .hero-title {
-      font-size: 2.5rem;
-      font-weight: 700;
-    }
-
-    .hero-subtitle {
-      font-size: 1.25rem;
-      margin-top: 0.5rem;
-      color: var(--text-light);
-    }
-
-    .hero-desc {
-      font-size: 1rem;
-      margin-top: 1rem;
-      max-width: 600px;
-      color: var(--text-light);
-    }
-
-    .cta-buttons {
-      margin-top: 2rem;
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .btn {
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 8px;
-      font-weight: 600;
-      cursor: pointer;
-      text-decoration: none;
-    }
-
-    .btn-primary {
-      background-color: var(--primary);
-      color: white;
-    }
-
-    .btn-secondary {
-      background-color: var(--secondary-bg);
-      color: var(--text-dark);
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <nav>
-      <div class="logo">Amirreza Nezami</div>
-      <div class="nav-links">
-        <a href="#portfolio">Portfolio</a>
-        <a href="#story">My Story</a>
-        <a href="#contact">Contact</a>
-        <a href="#home">Home</a>
+        <!-- Desktop Navigation -->
+        <nav id="nav-links"
+          class="hidden md:flex gap-10 items-center text-sm text-gray-800 font-medium justify-center w-full">
+          <a href="#home" class="hover:text-[#FE4D00] transition">Home</a>
+          <a href="#portfolio" class="hover:text-[#FE4D00] transition">Portfolio</a>
+          <a href="#story" class="hover:text-[#FE4D00] transition">My Story</a>
+          <a href="#contact" class="hover:text-[#FE4D00] transition">Contact</a>
+        </nav>
       </div>
-    </nav>
-    <h1 class="hero-title">Hey, I'm Amirreza</h1>
-    <h2 class="hero-subtitle">a UX Designer crafting intuitive, inclusive experiences.</h2>
-    <p class="hero-desc">
-      Driven by curiosity and empathy, I design clean systems and smooth user flows that solve real problems.<br>
-      Currently open to full-time UX roles — let’s connect.
-    </p>
-    <div class="cta-buttons">
-      <a href="resume.pdf" class="btn btn-primary" target="_blank">📄 Download Resume</a>
-      <a href="#contact" class="btn btn-secondary">📬 Contact Me</a>
-    </div>
-  </header>
-</body>
+
+      <!-- Mobile Nav Menu -->
+      <div id="mobile-menu"
+        class="md:hidden hidden px-6 pb-4 flex-col space-y-3 text-gray-800 text-base font-medium">
+        <a href="#home" class="hover:text-[#FE4D00] transition">Home</a>
+        <a href="#portfolio" class="hover:text-[#FE4D00] transition">Portfolio</a>
+        <a href="#story" class="hover:text-[#FE4D00] transition">My Story</a>
+        <a href="#contact" class="hover:text-[#FE4D00] transition">Contact</a>
+      </div>
+    </header>
+
+    <!-- Background Image -->
+<div class="absolute top-0 bottom-0 right-0 w-full md:w-[50vw] z-0 background-image">
+  <!-- Gradient Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-l from-white via-white/70 to-transparent md:from-transparent md:to-white z-10"></div>
+
+  <!-- Image -->
+  <img
+    src="./assets/images/desktop.avif"
+    alt="background visual"
+  class="object-cover w-full h-full md:opacity-90"
+  />
+</div>
+
+
+    <!-- Hero Section -->
+    <section class="relative z-20 text-left px-6 py-20 md:ml-12 max-w-3xl mx-auto">
+<h1 class="text-4xl md:text-5xl font-bold text-[#121212] leading-tight">
+  Hey, I’m Amirreza 👋
+</h1>
+
+<h2 class="text-2xl md:text-3xl text-gray-700 mt-6 font-medium">
+  a UX Designer building accessible, user-friendly experiences
+</h2>
+
+<p class="mt-6 text-gray-600 text-base leading-relaxed">
+  Focused on solving real user problems through clean design systems and thoughtful interactions.
+  <br />
+  Currently looking for a full-time UX Design role.
+</p>
+
+
+      <!-- CTA Buttons -->
+      <div class="mt-8 flex gap-4">
+        <a href="/Amirreza_Nezami_Resume.pdf" target="_blank"
+          class="bg-[#FE4D00] text-white px-5 py-2 rounded-xl text-sm hover:opacity-90 transition">
+          Download Resume
+        </a>
+        <a href="#contact"
+          class="border border-[#FE4D00] text-[#FE4D00] px-5 py-2 rounded-xl text-sm hover:bg-[#FE4D00] hover:text-white transition">
+          Contact Me
+        </a>
+      </div>
+    </section>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
 </html>
