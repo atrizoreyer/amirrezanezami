@@ -22,7 +22,7 @@
   <body class="text-[#121212] bg-white relative overflow-x-hidden">
 
     <!-- Navbar -->
-    <header class="relative z-30">
+<header class="sticky top-0 z-50 backdrop-blur-md bg-white/90 shadow-sm">
       <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <!-- Mobile Menu Button -->
         <div class="md:hidden">
@@ -46,61 +46,71 @@
         </nav>
       </div>
 
-      <!-- Mobile Nav Menu -->
-      <div id="mobile-menu"
-        class="md:hidden hidden px-6 pb-4 flex-col space-y-3 text-gray-800 text-base font-medium">
-        <a href="#home" class="hover:text-[#FE4D00] transition">Home</a>
-        <a href="#portfolio" class="hover:text-[#FE4D00] transition">Portfolio</a>
-        <a href="#story" class="hover:text-[#FE4D00] transition">My Story</a>
-        <a href="#contact" class="hover:text-[#FE4D00] transition">Contact</a>
-      </div>
+
+
+<!-- Mobile Nav Menu -->
+<div id="mobile-menu"
+  class="md:hidden hidden flex-col bg-white/95 backdrop-blur-lg px-6 py-4 space-y-3 text-gray-800 text-base font-medium shadow-md absolute left-0 right-0 top-full">
+  <a href="#home" class="hover:text-[#FE4D00] transition">Home</a>
+  <a href="#portfolio" class="hover:text-[#FE4D00] transition">Portfolio</a>
+  <a href="#story" class="hover:text-[#FE4D00] transition">My Story</a>
+  <a href="#contact" class="hover:text-[#FE4D00] transition">Contact</a>
+</div>
+
+
     </header>
 
 
 
 
     <!-- Hero Section -->
-<section class="relative z-20 text-left px-6 py-20 md:ml-12 md:pr-[52vw] max-w-6xl mx-auto">
+<section class="relative z-20 px-6 py-24 md:px-12 lg:px-24 max-w-7xl mx-auto text-left overflow-hidden">
 
-  <!-- Background Image (INSIDE the section now) -->
-  <div class="absolute top-0 bottom-0 right-0 w-full md:w-[50vw] z-0 background-image">
-    <div class="absolute inset-0 bg-gradient-to-l from-white via-white/70 to-transparent md:from-transparent md:to-white z-10"></div>
-    <img
-      src="./assets/images/desktop.avif"
-      alt="background visual"
-      class="object-cover w-full h-full md:opacity-90"
-    />
+  <!-- Background Image Positioned to Right with Gradient -->
+  <div class="absolute inset-0 z-0 flex justify-end md:pr-6 md:pr-20">
+    <div class="relative w-full md:w-[55%] h-full background-image">
+      <img
+        src="./assets/images/desktop.avif"
+        alt="background visual"
+        class="w-full h-full object-cover brightness-90 md:rounded-2xl "
+      />
+      <!-- Gradient from LEFT to RIGHT now -->
+      <div class="absolute inset-0 bg-gradient-to-r from-white via-white/70 to-transparent"></div>
+    </div>
   </div>
 
+  <!-- Text Content -->
+  <div class="relative z-10 max-w-2xl">
+    <h1 class="text-4xl md:text-6xl font-bold text-[#121212] leading-tight">
+      Hey, I’m Amirreza <span class="inline-block ml-2 text-3xl md:text-4xl">👋😊</span>
+    </h1>
+
+    <h2 class="text-2xl md:text-3xl text-gray-800 mt-6 font-medium">
+      a UX Designer building accessible, user-friendly experiences
+    </h2>
+
+    <p class="mt-6 text-gray-700 text-base leading-relaxed">
+      Focused on solving real user problems through clean design systems and thoughtful interactions.
+      <br />
+      Currently looking for a full-time UX Design role.
+    </p>
+
+    <!-- CTA Buttons -->
+    <div class="mt-8 flex flex-wrap gap-4">
+      <a href="/Amirreza_Nezami_Resume.pdf" target="_blank"
+        class="bg-[#FE4D00] text-white px-6 py-2 rounded-xl text-sm hover:opacity-90 transition">
+        Download Resume
+      </a>
+      <a href="#contact"
+        class="border border-[#FE4D00] text-[#FE4D00] px-6 py-2 rounded-xl text-sm hover:bg-[#FE4D00] hover:text-white transition">
+        Contact Me
+      </a>
+    </div>
+  </div>
+
+</section>
 
 
-      <h1 class="text-4xl md:text-6xl font-bold text-[#121212] leading-tight">
-  Hey, I’m Amirreza <span class="inline-block ml-2 text-3xl md:text-4xl">👋😊</span>
-</h1>
-
-<h2 class="text-2xl md:text-3xl text-gray-700 mt-6 font-medium">
-  a UX Designer building accessible, user-friendly experiences
-</h2>
-
-<p class="mt-6 text-gray-600 text-base leading-relaxed">
-  Focused on solving real user problems through clean design systems and thoughtful interactions.
-  <br />
-  Currently looking for a full-time UX Design role.
-</p>
-
-
-      <!-- CTA Buttons -->
-      <div class="mt-8 flex gap-4">
-        <a href="/Amirreza_Nezami_Resume.pdf" target="_blank"
-          class="bg-[#FE4D00] text-white px-5 py-2 rounded-xl text-sm hover:opacity-90 transition">
-          Download Resume
-        </a>
-        <a href="#contact"
-          class="border border-[#FE4D00] text-[#FE4D00] px-5 py-2 rounded-xl text-sm hover:bg-[#FE4D00] hover:text-white transition">
-          Contact Me
-        </a>
-      </div>
-    </section>
 
 
 
@@ -163,7 +173,7 @@ I focus on writing that guides, not distracts — because every word counts</p>
   <div class="grid gap-6 md:grid-cols-3">
     <!-- Card 1 -->
     <a href="/case-studies.html" class="group bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition cursor-pointer border border-gray-100 hover:border-[#FE4D00] hover:-translate-y-1">
-      <img src="./assets/images/case.avif" alt="Case Studies" class="w-100 h-100 mb-4" />
+      <img src="./assets/images/case.avif" alt="Case Studies" class="w-100 h-100 mb-4 rounded-2xl shadow-lg" />
       <h3 class="text-xl font-semibold text-[#121212] group-hover:text-[#FE4D00] underline">
         Case Studies
       </h3>
@@ -174,7 +184,7 @@ I focus on writing that guides, not distracts — because every word counts</p>
 
     <!-- Card 2 -->
     <a href="/work-experience.html" class="group bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition cursor-pointer border border-gray-100 hover:border-[#FE4D00] hover:-translate-y-1">
-      <img src="./assets/images/experience.avif" alt="Work Experience" class="w-100 h-100 mb-4" />
+      <img src="./assets/images/experience.avif" alt="Work Experience" class="w-100 h-100 mb-4 rounded-2xl shadow-lg" />
       <h3 class="text-xl font-semibold text-[#121212] group-hover:text-[#FE4D00] underline">
         Work Experience
       </h3>
@@ -185,7 +195,7 @@ I focus on writing that guides, not distracts — because every word counts</p>
 
     <!-- Card 3 -->
     <a href="/portfolio.html" class="group bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition cursor-pointer border border-gray-100 hover:border-[#FE4D00] hover:-translate-y-1">
-      <img src="./assets/images/projct.avif" alt="Portfolio" class="w-100 h-100 mb-4" />
+      <img src="./assets/images/projct.avif" alt="Portfolio" class="w-100 h-100 mb-4 rounded-2xl shadow-lg" />
       <h3 class="text-xl font-semibold text-[#121212] group-hover:text-[#FE4D00] underline">
         Portfolio
       </h3>
@@ -212,6 +222,103 @@ I focus on writing that guides, not distracts — because every word counts</p>
     Your browser does not support the video tag.
   </video>
 </section>
+
+
+
+
+
+<section class="bg-[#FAFAFA] px-6 md:px-12 py-16">
+  <h2 class="text-3xl font-bold text-center mb-4">💬 Nice things people say about me</h2>
+  <p class="text-center italic text-gray-500 mb-12">Okay... maybe a few are AI-generated. But hey — they make good points.</p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    
+    <div class="bg-white p-6 rounded-2xl shadow text-center">
+      <img src="./assets/images/pic/Taylor Smith.avif" alt="Taylor Smith" class="w-20 h-20 mx-auto mb-4 rounded-full object-cover">
+      <p class="text-gray-700 italic text-sm">"Working with Amirreza feels like research and design finally speak the same language. He gets users."</p>
+      <p class="text-sm mt-3 font-semibold text-gray-900">— Taylor Smith, UX Researcher</p>
+    </div>
+
+    <div class="bg-white p-6 rounded-2xl shadow text-center">
+      <img src="./assets/images/pic/Jordan Lee.avif" alt="Jordan Lee" class="w-20 h-20 mx-auto mb-4 rounded-full object-cover">
+      <p class="text-gray-700 italic text-sm">"Amirreza’s eye for structure and flow is incredible. His designs don’t just look good — they make sense."</p>
+      <p class="text-sm mt-3 font-semibold text-gray-900">— Jordan Lee, Visual Designer</p>
+    </div>
+
+    <div class="bg-white p-6 rounded-2xl shadow text-center">
+      <img src="./assets/images/pic/Hassan Askari.jpeg" alt="Hassan Askari" class="w-20 h-20 mx-auto mb-4 rounded-full object-cover">
+      <p class="text-gray-700 italic text-sm">"Amirreza is a thoughtful UX designer who turns complex ideas into clean, intuitive experiences."</p>
+      <p class="text-sm mt-3 font-semibold text-gray-900">— Hassan Askari, Java Web Developer</p>
+    </div>
+
+    <div class="bg-white p-6 rounded-2xl shadow text-center">
+      <img src="./assets/images/pic/Jamie Taylor.avif" alt="Jamie Taylor" class="w-20 h-20 mx-auto mb-4 rounded-full object-cover">
+      <p class="text-gray-700 italic text-sm">"Deadlines? Cross-team chaos? No problem. Amirreza brings clarity and calm like it’s his superpower."</p>
+      <p class="text-sm mt-3 font-semibold text-gray-900">— Jamie Taylor, Project Manager</p>
+    </div>
+
+    <div class="bg-white p-6 rounded-2xl shadow text-center">
+      <img src="./assets/images/pic/Morgan Davis.avif" alt="Morgan Davis" class="w-20 h-20 mx-auto mb-4 rounded-full object-cover">
+      <p class="text-gray-700 italic text-sm">"He’s the kind of designer devs love — clean files, clear logic, no guesswork."</p>
+      <p class="text-sm mt-3 font-semibold text-gray-900">— Morgan Davis, UI Developer</p>
+    </div>
+
+    <div class="bg-white p-6 rounded-2xl shadow text-center">
+      <img src="./assets/images/pic/Cameron White.avif" alt="Cameron White" class="w-20 h-20 mx-auto mb-4 rounded-full object-cover">
+      <p class="text-gray-700 italic text-sm">"What I love about Amirreza is how he ties user needs to business goals. That’s rare."</p>
+      <p class="text-sm mt-3 font-semibold text-gray-900">— Cameron White, Product Manager</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<footer class="bg-black px-6 md:px-12 py-16 text-[#F5F6FA]">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+    <!-- Text Section -->
+    <div>
+      <h2 class="text-3xl font-bold mb-4 text-white">Get in touch</h2>
+      <h3 class="text-xl font-semibold mb-2">Amirreza Nezami</h3>
+      <p class="text-[#D1D5DB] mb-4">I'd love to hear from you. Let's chat about your design needs and ideas.</p>
+
+      <div class="mb-4">
+        <p class="text-sm font-medium text-[#E5E7EB] mb-1">📧 Send me an email</p>
+        <p class="text-[#D1D5DB]">amirreza.nezami28@gmail.com</p>
+      </div>
+
+      <div class="mb-4">
+        <p class="text-sm font-medium text-[#E5E7EB] mb-1">📞 Give me a call</p>
+        <p class="text-[#D1D5DB]">+1 (647) 741-2890</p>
+        <p class="text-gray-400 text-sm">I'm available Monday to Friday, 9am to 5pm.</p>
+      </div>
+
+      <a href="https://www.linkedin.com/in/amirreza-nezami" target="_blank" class="inline-block mt-2 text-[#FE4D00] font-medium hover:underline">
+        💼 Connect on LinkedIn
+      </a>
+
+      <p class="mt-8 text-lg font-semibold text-white">Let’s make something great together! 🚀</p>
+    </div>
+
+    <!-- Image Section -->
+    <div class="flex justify-center md:justify-end">
+      <img src="./assets/images/pic/Amirreza Nezami.jpeg" alt="Amirreza Nezami" class="w-72 h-auto rounded-2xl shadow-lg object-cover">
+    </div>
+
+  </div>
+</footer>
+
+
+
 
 
 
