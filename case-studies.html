@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<link rel="stylesheet" href="css/style.css" />
+<link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amirreza Nezami – Case Studies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Saira+Semi+Condensed:wght@400;700&display=swap');
+      body {
+        font-family: 'Bai Jamjuree', sans-serif;
+        background-color: #ffffff;
+      }
+      h1, h2, h3 {
+        font-family: 'Saira Semi Condensed', sans-serif;
+      }
+    </style>
+  </head>
+<body class="bg-white text-[#121212]">
+
+  <!-- Header (Reusable or same as homepage) -->
+  <header class="px-6 py-6 md:px-12 flex items-center justify-between">
+    <h1 class="text-2xl font-bold">Amirreza Nezami</h1>
+    <nav class="hidden md:flex gap-6">
+      <a href="/" class="hover:text-[#FE4D00]">Home</a>
+      <a href="/case-studies.html" class="text-[#FE4D00] font-semibold">Case Studies</a>
+      <a href="/contact.html" class="hover:text-[#FE4D00]">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Case Studies Section -->
+  <section class="px-6 py-20 md:px-12">
+    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">
+      My Case Studies
+    </h2>
+
+    <div class="grid gap-8 md:grid-cols-3">
+      <!-- Case Study Card 1 -->
+      <a href="/pdfs/freyfunds-case-study.pdf" target="_blank" class="group bg-[#F5F6FA] rounded-2xl overflow-hidden shadow hover:shadow-lg transition hover:-translate-y-1 border border-transparent hover:border-[#FE4D00]">
+        <img src="./assets/images/freyfunds-cover.jpg" alt="FreyFunds" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h3 class="font-semibold text-lg group-hover:text-[#FE4D00]">FreyFunds</h3>
+          <p class="text-sm text-gray-600 mt-1">A personal finance app designed for clarity and trust.</p>
+        </div>
+      </a>
+
+      <!-- Case Study Card 2 -->
+      <a href="/pdfs/investors-edge.pdf" target="_blank" class="group bg-[#F5F6FA] rounded-2xl overflow-hidden shadow hover:shadow-lg transition hover:-translate-y-1 border border-transparent hover:border-[#FE4D00]">
+        <img src="./assets/images/investors-edge.jpg" alt="Investor's Edge" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h3 class="font-semibold text-lg group-hover:text-[#FE4D00]">Investor's Edge</h3>
+          <p class="text-sm text-gray-600 mt-1">Accessibility redesign for a stock trading platform.</p>
+        </div>
+      </a>
+
+      <!-- Add 4 more the same way -->
+      <a href="/pdfs/project-3.pdf" target="_blank" class="group bg-[#F5F6FA] rounded-2xl overflow-hidden shadow hover:shadow-lg transition hover:-translate-y-1 border border-transparent hover:border-[#FE4D00]">
+        <img src="./assets/images/project-3.jpg" alt="Project 3" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h3 class="font-semibold text-lg group-hover:text-[#FE4D00]">MelodyAI</h3>
+          <p class="text-sm text-gray-600 mt-1">Music app with smarter UX and simplified flows.</p>
+        </div>
+      </a>
+
+      <!-- ... and so on for Project 4, 5, 6 -->
+    </div>
+  </section>
+
+</body>
+</html>
