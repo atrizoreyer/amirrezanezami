@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Amirreza Nezami – UX Designer</title>
@@ -17,7 +19,7 @@
       }
     </style>
   </head>
-  <body class="text-[#121212] bg-white relative overflow-hidden">
+  <body class="text-[#121212] bg-white relative overflow-x-hidden">
 
     <!-- Navbar -->
     <header class="relative z-30">
@@ -54,24 +56,26 @@
       </div>
     </header>
 
-    <!-- Background Image -->
-<div class="absolute top-0 bottom-0 right-0 w-full md:w-[50vw] z-0 background-image">
-  <!-- Gradient Overlay -->
-  <div class="absolute inset-0 bg-gradient-to-l from-white via-white/70 to-transparent md:from-transparent md:to-white z-10"></div>
 
-  <!-- Image -->
-  <img
-    src="./assets/images/desktop.avif"
-    alt="background visual"
-  class="object-cover w-full h-full md:opacity-90"
-  />
-</div>
 
 
     <!-- Hero Section -->
-    <section class="relative z-20 text-left px-6 py-20 md:ml-12 max-w-3xl mx-auto">
-<h1 class="text-4xl md:text-5xl font-bold text-[#121212] leading-tight">
-  Hey, I’m Amirreza 👋
+<section class="relative z-20 text-left px-6 py-20 md:ml-12 md:pr-[52vw] max-w-6xl mx-auto">
+
+  <!-- Background Image (INSIDE the section now) -->
+  <div class="absolute top-0 bottom-0 right-0 w-full md:w-[50vw] z-0 background-image">
+    <div class="absolute inset-0 bg-gradient-to-l from-white via-white/70 to-transparent md:from-transparent md:to-white z-10"></div>
+    <img
+      src="./assets/images/desktop.avif"
+      alt="background visual"
+      class="object-cover w-full h-full md:opacity-90"
+    />
+  </div>
+
+
+
+      <h1 class="text-4xl md:text-6xl font-bold text-[#121212] leading-tight">
+  Hey, I’m Amirreza <span class="inline-block ml-2 text-3xl md:text-4xl">👋😊</span>
 </h1>
 
 <h2 class="text-2xl md:text-3xl text-gray-700 mt-6 font-medium">
@@ -97,6 +101,61 @@
         </a>
       </div>
     </section>
+
+
+
+
+
+
+
+
+
+    <!-- Card Section -->
+<section class="relative z-20 px-6 py-16 md:py-24 bg-[#F5F6FA]">
+  <div class="max-w-6xl mx-auto">
+    <h3 class="text-2xl md:text-3xl font-semibold mb-10 text-center text-[#121212]">What I Focus On</h3>
+
+    <div class="grid gap-6 md:grid-cols-2">
+      <!-- Card 1 -->
+      <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition">
+        <h4 class="text-xl font-semibold text-[#FE4D00] mb-2">UX Design</h4>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Crafting intuitive, user-centered experiences with accessibility and usability in mind.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition">
+        <h4 class="text-xl font-semibold text-[#FE4D00] mb-2">Design Systems</h4>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Building scalable, reusable UI components to create consistent user interfaces across platforms.
+        </p>
+      </div>
+
+            <!-- Card 3 -->
+      <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition">
+        <h4 class="text-xl font-semibold text-[#FE4D00] mb-2">Digital Content</h4>
+        <p class="text-gray-600 text-sm leading-relaxed">
+Crafting clear, engaging, and accessible content that supports user flows and strengthens brand voice. 
+I focus on writing that guides, not distracts — because every word counts</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition">
+        <h4 class="text-xl font-semibold text-[#FE4D00] mb-2">Problem Solving</h4>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Solving real user problems by blending research, testing, and iteration into elegant solutions.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
 
     <!-- JavaScript for Mobile Menu -->
     <script>
