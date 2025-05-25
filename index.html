@@ -3,80 +3,115 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amirreza Nezami</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Amirreza Nezami – UX Designer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Saira+Semi+Condensed:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #FE4D00;
+      --background: #FFFFFF;
+      --secondary-bg: #F5F6FA;
+      --text-dark: #111;
+      --text-light: #666;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Bai Jamjuree', sans-serif;
+      background: var(--background);
+      color: var(--text-dark);
+    }
+
+    header {
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    nav {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      font-weight: 600;
+    }
+
+    .hero-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+      margin-top: 0.5rem;
+      color: var(--text-light);
+    }
+
+    .hero-desc {
+      font-size: 1rem;
+      margin-top: 1rem;
+      max-width: 600px;
+      color: var(--text-light);
+    }
+
+    .cta-buttons {
+      margin-top: 2rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: white;
+    }
+
+    .btn-secondary {
+      background-color: var(--secondary-bg);
+      color: var(--text-dark);
+    }
+  </style>
 </head>
 <body>
-
-  <!-- Header / Navigation -->
   <header>
-    <nav class="container">
-      <h1>Amirreza Nezami</h1>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Case Studies</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+    <nav>
+      <div class="logo">Amirreza Nezami</div>
+      <div class="nav-links">
+        <a href="#portfolio">Portfolio</a>
+        <a href="#story">My Story</a>
+        <a href="#contact">Contact</a>
+        <a href="#home">Home</a>
+      </div>
     </nav>
+    <h1 class="hero-title">Hey, I'm Amirreza</h1>
+    <h2 class="hero-subtitle">a UX Designer crafting intuitive, inclusive experiences.</h2>
+    <p class="hero-desc">
+      Driven by curiosity and empathy, I design clean systems and smooth user flows that solve real problems.<br>
+      Currently open to full-time UX roles — let’s connect.
+    </p>
+    <div class="cta-buttons">
+      <a href="resume.pdf" class="btn btn-primary" target="_blank">📄 Download Resume</a>
+      <a href="#contact" class="btn btn-secondary">📬 Contact Me</a>
+    </div>
   </header>
-
-  <!-- Hero Section -->
-  <section id="hero" class="container">
-    <h2>UX Designer crafting modern, human-centered digital experiences.</h2>
-    <p>Based in Toronto | Available for freelance & full-time roles</p>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="container">
-    <h2>About Me</h2>
-    <p>I'm a UX Designer with a background in Industrial Engineering and a passion for clean, accessible, and emotionally resonant design.</p>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="container">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-      <div><strong>UX Research</strong></div>
-      <div><strong>Wireframing</strong></div>
-      <div><strong>Prototyping</strong></div>
-      <div><strong>Design Systems</strong></div>
-      <div><strong>HTML/CSS</strong></div>
-      <div><strong>Accessibility</strong></div>
-    </div>
-  </section>
-
-  <!-- Case Studies Section -->
-  <section id="projects" class="container">
-    <h2>Case Studies</h2>
-    <div class="project-cards">
-      <div class="card">FreyFunds – Personal Finance App</div>
-      <div class="card">Investor’s Edge – UX Redesign</div>
-      <div class="card">Design System – FreyFunds</div>
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-  <section id="experience" class="container">
-    <h2>Experience</h2>
-    <ul class="timeline">
-      <li><strong>HSA Inc. – Project Admin (2024–Now)</strong></li>
-      <li><strong>Hami Ofogh Farda – UX Designer (2020–2023)</strong></li>
-      <li><strong>PixelSense – GUI Designer (2019–2020)</strong></li>
-    </ul>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="container">
-    <h2>Let's Connect</h2>
-    <p>Email: <a href="mailto:amirreza.nezami22@gmail.com">amirreza.nezami28@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/amirreza-nezami" target="_blank">amirreza-nezami</a></p>
-  </section>
-
-  <footer class="container">
-    <p>&copy; 2025 Amirreza Nezami</p>
-  </footer>
-
 </body>
 </html>
