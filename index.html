@@ -21,50 +21,117 @@
   </head>
   <body class="text-[#121212] bg-white relative overflow-x-hidden">
 
-    <!-- Navbar -->
-<header class="sticky top-0 z-50 backdrop-blur-md bg-white/90 shadow-sm">
-      <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <!-- Mobile Menu Button -->
-        <div class="md:hidden">
-          <button id="menu-toggle" class="text-[#FE4D00] focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor"
-              viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-              </path>
-            </svg>
-          </button>
-        </div>
-
-        <!-- Desktop Navigation -->
-        <nav id="nav-links"
-          class="hidden md:flex gap-10 items-center text-sm text-gray-800 font-medium justify-center w-full">
-          <a href="#home" class="hover:text-[#FE4D00] transition">Home</a>
-          <a href="#portfolio" class="hover:text-[#FE4D00] transition">Portfolio</a>
-          <a href="#story" class="hover:text-[#FE4D00] transition">My Story</a>
-          <a href="#contact" class="hover:text-[#FE4D00] transition">Contact</a>
-        </nav>
-      </div>
 
 
 
-<!-- Mobile Nav Menu -->
-<div id="mobile-menu"
-  class="md:hidden hidden flex-col bg-white/95 backdrop-blur-lg px-6 py-4 space-y-3 text-gray-800 text-base font-medium shadow-md absolute left-0 right-0 top-full">
-  <a href="#home" class="hover:text-[#FE4D00] transition">Home</a>
-  <a href="#portfolio" class="hover:text-[#FE4D00] transition">Portfolio</a>
-  <a href="#story" class="hover:text-[#FE4D00] transition">My Story</a>
-  <a href="#contact" class="hover:text-[#FE4D00] transition">Contact</a>
-</div>
 
 
-    </header>
+
+
+
+
+<!-- ✅ Navbar -->
+<header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between relative">
+
+    <!-- Logo -->
+    <div class="text-lg font-semibold text-[#FE4D00]">Amirreza Nezami</div>
+
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex gap-10 text-sm text-gray-800 font-medium">
+      <a href="#home" class="hover:text-[#FE4D00] transition">Home</a>
+      <a href="#portfolio" class="hover:text-[#FE4D00] transition">Portfolio</a>
+      <a href="#story" class="hover:text-[#FE4D00] transition">My Story</a>
+      <a href="#contact" class="hover:text-[#FE4D00] transition">Contact</a>
+    </nav>
+
+    <!-- Menu Toggle Button -->
+    <button id="menu-toggle" class="md:hidden text-[#FE4D00] focus:outline-none z-50 relative">
+      <!-- Hamburger Icon -->
+      <svg id="menu-icon" class="w-6 h-6 block" fill="none" stroke="currentColor"
+        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+
+      <!-- X Icon -->
+      <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor"
+        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div id="mobile-menu"
+    class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out md:hidden flex flex-col bg-white/90 backdrop-blur-md px-6 py-0 space-y-4 text-gray-800 text-base font-medium shadow-md">
+    <a href="#home" class="mobile-link hover:text-[#FE4D00] transition">Home</a>
+    <a href="#portfolio" class="mobile-link hover:text-[#FE4D00] transition">Portfolio</a>
+    <a href="#story" class="mobile-link hover:text-[#FE4D00] transition">My Story</a>
+    <a href="#contact" class="mobile-link hover:text-[#FE4D00] transition">Contact</a>
+  </div>
+</header>
+
+
+<!-- ✅ JavaScript for Mobile Menu -->
+<script>
+  const toggleBtn = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('menu-icon');
+  const closeIcon = document.getElementById('close-icon');
+  const mobileLinks = document.querySelectorAll('.mobile-link');
+
+  let isMenuOpen = false;
+
+  function toggleMenu(state) {
+    isMenuOpen = state !== undefined ? state : !isMenuOpen;
+
+    if (isMenuOpen) {
+      mobileMenu.classList.remove('max-h-0', 'py-0');
+      mobileMenu.classList.add('max-h-[300px]', 'py-4');
+      menuIcon.classList.add('hidden');
+      closeIcon.classList.remove('hidden');
+    } else {
+      mobileMenu.classList.remove('max-h-[300px]', 'py-4');
+      mobileMenu.classList.add('max-h-0', 'py-0');
+      menuIcon.classList.remove('hidden');
+      closeIcon.classList.add('hidden');
+    }
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    toggleMenu();
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (event) => {
+    const isClickInside = toggleBtn.contains(event.target) || mobileMenu.contains(event.target);
+    if (!isClickInside && isMenuOpen) {
+      toggleMenu(false);
+    }
+  });
+
+  // Close menu when clicking on a link
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => toggleMenu(false));
+  });
+</script>
+
+
+
+
+
+
+
+
+
 
 
 
 
     <!-- Hero Section -->
-<section class="relative z-20 px-6 py-24 md:px-12 lg:px-24 max-w-7xl mx-auto text-left overflow-hidden">
+<section id="home" class="relative z-20 px-6 py-24 md:px-12 lg:px-24 max-w-7xl mx-auto text-left overflow-hidden">
 
   <!-- Background Image Positioned to Right with Gradient -->
   <div class="absolute inset-0 z-0 flex justify-end md:pr-6 md:pr-20">
@@ -121,7 +188,7 @@
 
 
     <!-- Card Section -->
-<section class="relative z-20 px-6 py-16 md:py-24 bg-[#F5F6FA]">
+<section class="relative z-20 px-6 py-16 md:py-24">
   <div class="max-w-6xl mx-auto">
     <h3 class="text-2xl md:text-3xl font-semibold mb-10 text-center text-[#121212]">What I Focus On</h3>
 
@@ -165,7 +232,7 @@ I focus on writing that guides, not distracts — because every word counts</p>
 
 
 <!-- Highlights Section -->
-<section class="py-20 px-6 md:px-12 bg-[#F5F6FA]">
+<section id="portfolio" class="py-20 px-6 md:px-12 bg-[#F5F6FA]">
   <h2 class="text-3xl md:text-4xl font-bold text-[#121212] mb-12 text-center">
     Explore My Work
   </h2>
@@ -183,7 +250,7 @@ I focus on writing that guides, not distracts — because every word counts</p>
     </a>
 
     <!-- Card 2 -->
-    <a href="/work-experience.html" class="group bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition cursor-pointer border border-gray-100 hover:border-[#FE4D00] hover:-translate-y-1">
+    <a href="/experience.html" class="group bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition cursor-pointer border border-gray-100 hover:border-[#FE4D00] hover:-translate-y-1">
       <img src="./assets/images/experience.avif" alt="Work Experience" class="w-100 h-100 mb-4 rounded-2xl shadow-lg" />
       <h3 class="text-xl font-semibold text-[#121212] group-hover:text-[#FE4D00] underline">
         Work Experience
@@ -208,7 +275,7 @@ I focus on writing that guides, not distracts — because every word counts</p>
 
 
 
-<section class="px-6 md:px-12 py-16 text-center bg-[#F5F6FA]">
+<section id="story" class="px-6 md:px-12 py-16 text-center bg-[#F5F6FA]">
   <h2 class="text-3xl font-bold mb-6">🎬 My Journey into UX Design</h2>
   <p class="italic text-gray-500 mt-4">"It wasn’t just a career switch — it was a mindset shift." 😊</p>
 
@@ -227,7 +294,7 @@ I focus on writing that guides, not distracts — because every word counts</p>
 
 
 
-<section class="bg-[#FAFAFA] px-6 md:px-12 py-16">
+<section class=" px-6 md:px-12 py-16">
   <h2 class="text-3xl font-bold text-center mb-4">💬 Nice things people say about me</h2>
   <p class="text-center italic text-gray-500 mb-12">Okay... maybe a few are AI-generated. But hey — they make good points.</p>
 
@@ -282,7 +349,7 @@ I focus on writing that guides, not distracts — because every word counts</p>
 
 
 
-<footer class="bg-black px-6 md:px-12 py-16 text-[#F5F6FA]">
+<footer id="contact" class="bg-black px-6 md:px-12 py-16 text-[#F5F6FA]">
   <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
     <!-- Text Section -->
@@ -337,14 +404,7 @@ I focus on writing that guides, not distracts — because every word counts</p>
 
 
 
-    <!-- JavaScript for Mobile Menu -->
-    <script>
-      const menuToggle = document.getElementById("menu-toggle");
-      const mobileMenu = document.getElementById("mobile-menu");
 
-      menuToggle.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
-    </script>
+
   </body>
 </html>
