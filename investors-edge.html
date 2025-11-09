@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Investor’s Edge – Case Study | Amirreza Nezami</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Saira+Semi+Condensed:wght@400;700&display=swap');
+      body { font-family: 'Bai Jamjuree', sans-serif; background-color: #ffffff; }
+      h1,h2,h3 { font-family: 'Saira Semi Condensed', sans-serif; }
+
+      /* Back button that collapses to icon-only when user scrolls */
+      .case-back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #374151; /* gray-700 */
+        background: transparent;
+        padding: 0.35rem 0.6rem;
+        border-radius: 9999px;
+        transition: all 200ms ease;
+        text-decoration: none;
+      }
+
+      .case-back-btn .case-back-icon {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+      }
+
+      /* Compact/fixed state */
+      .case-back-btn.compact {
+        position: fixed;
+        top: 14px;
+        left: 14px;
+        padding: 0.45rem;
+        background: rgba(255,255,255,0.95);
+        box-shadow: 0 6px 18px rgba(15,23,42,0.08);
+        border-radius: 9999px;
+        z-index: 80;
+      }
+
+      .case-back-btn.compact span {
+        display: none; /* hide the text in compact state */
+      }
+
+      /* PDF button small icon spacing */
+      .pdf-btn svg.pdf-icon { width: 18px; height: 18px; margin-right: 0.5rem; flex-shrink:0 }
+    </style>
+  </head>
+
+  <body class="text-[#121212] bg-white relative overflow-x-hidden">
+
+<!-- ✅ Navbar -->
+<header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between relative">
+    <div class="text-lg font-semibold text-[#FE4D00]">
+      <a href="case-studies.html">Amirreza Nezami</a>
+    </div>
+    <nav class="hidden md:flex gap-10 text-sm text-gray-800 font-medium">
+      <a href="index.html#home" class="hover:text-[#DB00AC] transition">Home</a>
+      <a href="/case-studies.html" class="hover:text-[#DB00AC] transition">Case Studies</a>
+      <a href="/Selected-Projects.html" class="hover:text-[#DB00AC] transition">Selected Projects</a>
+      <a href="/experience.html" class="hover:text-[#DB00AC] transition">Experiences</a>
+      <a href="#contact" class="hover:text-[#DB00AC] transition">Contact</a>
+    </nav>
+    <a href="case-studies.html" class="md:hidden text-sm text-gray-800">Back</a>
+  </div>
+</header>
+
+
+<!-- ✅ Main Case Study Content -->
+<main class="max-w-5xl mx-auto px-6 md:px-12 py-12">
+
+  <!-- Floating Back button (placed before hero, top-left) -->
+  <div class="mb-4">
+    <a href="case-studies.html" class="case-back-btn" id="caseBackBtn" aria-label="Back to Case Studies">
+      <!-- left arrow icon -->
+      <svg class="case-back-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M15 6L9 12L15 18" stroke="#111827" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="text-sm">Back to Case Studies</span>
+    </a>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="mb-10 text-center">
+    <h1 class="text-4xl font-bold mb-3">Investor’s Edge – UX Redesign</h1>
+    <p class="text-gray-600 text-lg max-w-3xl mx-auto">
+      A redesign of CIBC’s trading platform focused on simplifying trade flows, improving clarity, and boosting user confidence.
+    </p>
+    <div class="mt-5 flex justify-center gap-4">
+      <!-- PDF button with red PDF icon and tooltip/title -->
+      <a href="./assets/images/CaseStudy/Amirreza Nezami - Case study - Investor’s Edge UX Redesign.pdf" target="_blank" rel="noopener noreferrer" class="pdf-btn inline-flex items-center text-sm bg-[#DB00AC] text-white px-4 py-2 rounded-md hover:opacity-90 transition" title="Download full case study (PDF)" aria-label="Download full case study PDF (opens in new tab)">
+        <svg class="pdf-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true">
+          <title>PDF</title>
+          <rect x="2" y="3" width="20" height="18" rx="2" fill="#DC2626" />
+          <text x="12" y="15.5" text-anchor="middle" font-size="8.5" font-family="Arial, Helvetica, sans-serif" fill="#ffffff">PDF</text>
+        </svg>
+        <span>View Full PDF Case Study</span>
+      </a>
+    </div>
+  </header>
+
+
+
+  <!-- Context Section -->
+  <section class="grid md:grid-cols-2 gap-6 bg-[#F5F6FA] rounded-xl p-6 mb-12">
+    <div>
+      <h3 class="font-semibold mb-2">Context</h3>
+      <p class="text-sm text-gray-700">
+        Investor’s Edge is CIBC’s self-directed trading platform for retail investors. The challenge was to make trade workflows simpler and reduce friction for everyday users.
+      </p>
+    </div>
+    <div>
+      <h3 class="font-semibold mb-2">Role & Duration</h3>
+      <p class="text-sm text-gray-700">
+        UX Designer — 6-week sprint. Collaborated with Product Manager and Engineering team to redesign flow, improve IA, and validate usability improvements.
+      </p>
+    </div>
+  </section>
+
+
+
+  <!-- Problem -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-semibold mb-3">Problem</h2>
+    <p class="text-gray-700 mb-4">
+      Users were getting lost during the trading process, making preventable mistakes. Key pain points included unclear CTAs, inconsistent states, and lack of trust in confirmation steps.
+    </p>
+    <ul class="list-disc pl-5 text-gray-700 text-sm space-y-1">
+      <li>Confusing terminology and redundant steps caused hesitation.</li>
+      <li>Trade confirmation states weren’t visually distinct.</li>
+      <li>Accessibility gaps (contrast, focus states) increased errors.</li>
+    </ul>
+  </section>
+
+
+
+  <!-- Process -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-semibold mb-6">Process</h2>
+
+    <div class="space-y-10">
+      <div>
+        <h3 class="font-semibold text-lg mb-2">1. Research & Insights</h3>
+        <p class="text-sm text-gray-700">
+          Conducted 5 usability tests and heuristic evaluations revealing confusion in trade review and confirmation steps. Mapped user journey to identify friction points.
+        </p>
+        <img src="./assets/images/CaseStudy/InvestorEdge_ResearchFindings.jpg" alt="Research Findings" class="w-full rounded-lg shadow mt-3">
+      </div>
+
+      <div>
+        <h3 class="font-semibold text-lg mb-2">2. Wireframes & Iteration</h3>
+        <p class="text-sm text-gray-700">
+          Simplified the trade flow into three clear stages: Input, Review, and Confirm. Reduced redundant modals and improved hierarchy for critical actions.
+        </p>
+        <img src="./assets/images/CaseStudy/InvestorEdge_Wireframe.jpg" alt="Wireframe Sketch" class="w-full rounded-lg shadow mt-3">
+      </div>
+
+      <div>
+        <h3 class="font-semibold text-lg mb-2">3. Visual Design & Testing</h3>
+        <p class="text-sm text-gray-700">
+          Applied CIBC’s design system, improved focus states, and polished typography for better scannability. Tested prototype with 6 participants.
+        </p>
+        <img src="./assets/images/CaseStudy/InvestorEdge_UI.jpg" alt="Final UI Design" class="w-full rounded-lg shadow mt-3">
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Outcome -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-semibold mb-3">Outcome</h2>
+    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+      <li>✅ 25% faster task completion during trade flow testing.</li>
+      <li>✅ Significant drop in user errors across trade confirmation steps.</li>
+      <li>✅ Improved user trust with clearer visual feedback and accessibility compliance.</li>
+    </ul>
+    <p class="text-gray-700 mt-4">
+      The redesign turned a stressful, complex process into a predictable and user-friendly experience. One tester described it as
+      <em>"more intuitive and less intimidating to trade with."</em>
+    </p>
+  </section>
+
+
+
+  <!-- Gallery -->
+  <section class="space-y-6 mb-12">
+    <h2 class="text-2xl font-semibold">Screens</h2>
+    <div class="grid md:grid-cols-3 gap-4">
+      <img src="./assets/images/CaseStudy/InvestorEdge_Before.jpg" alt="Before" class="rounded-lg shadow object-cover">
+      <img src="./assets/images/CaseStudy/InvestorEdge_After.jpg" alt="After" class="rounded-lg shadow object-cover">
+      <img src="./assets/images/CaseStudy/InvestorEdge_Responsive.jpg" alt="Responsive View" class="rounded-lg shadow object-cover">
+    </div>
+  </section>
+
+
+
+  <!-- CTA -->
+    <div class="mt-5 flex justify-center gap-4">
+      <!-- PDF button with red PDF icon and tooltip/title -->
+      <a href="./assets/images/CaseStudy/Amirreza Nezami - Case study - Investor’s Edge UX Redesign.pdf" target="_blank" rel="noopener noreferrer" class="pdf-btn inline-flex items-center text-sm bg-[#DB00AC] text-white px-4 py-2 rounded-md hover:opacity-90 transition" title="Download full case study (PDF)" aria-label="Download full case study PDF (opens in new tab)">
+        <svg class="pdf-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true">
+          <title>PDF</title>
+          <rect x="2" y="3" width="20" height="18" rx="2" fill="#DC2626" />
+          <text x="12" y="15.5" text-anchor="middle" font-size="8.5" font-family="Arial, Helvetica, sans-serif" fill="#ffffff">PDF</text>
+        </svg>
+        <span>View Full PDF Case Study</span>
+      </a>
+    </div>
+
+</main>
+
+
+
+  <footer id="contact" class="bg-black px-6 md:px-12 py-16 text-[#F5F6FA]">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+    <!-- Text Section -->
+    <div>
+      <h2 class="text-3xl font-bold mb-4 text-white">Get in touch</h2>
+      <h3 class="text-xl font-semibold mb-2">Amirreza Nezami</h3>
+      <p class="text-[#D1D5DB] mb-4">I'd love to hear from you. Let's chat about your design needs and ideas.</p>
+
+      <div class="mb-4">
+        <p class="text-sm font-medium text-[#E5E7EB] mb-1">📧 Send me an email</p>
+        <p class="text-[#D1D5DB]">amirreza.nezami28@gmail.com</p>
+        <p class="text-[#D1D5DB]">design.druiux@gmail.com</p>
+
+      </div>
+
+      <div class="mb-4">
+        <p class="text-sm font-medium text-[#E5E7EB] mb-1">📞 Give me a call</p>
+        <p class="text-[#D1D5DB]">+1 (647) 741-2890</p>
+        <p class="text-gray-400 text-sm">I'm available Monday to Friday, 9am to 5pm.</p>
+      </div>
+
+      <a href="https://www.linkedin.com/in/amirreza-nezami" target="_blank" class="inline-block mt-2 text-[#FE4D00] font-medium hover:underline">
+        💼 Connect on LinkedIn
+      </a>
+    <div class="mt-8 flex flex-wrap gap-4">
+      <a href="./assets/images/Amirreza Nezami – UX_UI Designer – Resume.pdf" target="_blank"
+        class="bg-[#DB00AC] text-white px-6 py-2 rounded-xl text-sm hover:opacity-90 transition"
+           aria-label="Download Resume as PDF (opens in new tab)">
+
+        Download Resume
+      </a>
+
+    </div>
+      <p class="mt-8 text-lg font-semibold text-white">Let’s make something great together! 🚀</p>
+    </div>
+
+    <!-- Image Section -->
+    <div class="flex justify-center md:justify-end">
+      <img src="./assets/images/pic/Amirreza Nezami.jpeg" alt="Amirreza Nezami" class="w-72 h-auto rounded-2xl shadow-lg object-cover">
+    </div>
+
+  </div>
+</footer>
+
+<!-- Scroll behaviour script: collapse back button to icon-only after scrolling past header -->
+<script>
+  (function(){
+    const backBtn = document.getElementById('caseBackBtn');
+    if(!backBtn) return;
+    const compactThreshold = 120; // pixels scrolled before collapsing
+    function onScroll(){
+      if(window.pageYOffset > compactThreshold){
+        backBtn.classList.add('compact');
+      } else {
+        backBtn.classList.remove('compact');
+      }
+    }
+    // initial check
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  })();
+</script>
+
+</body>
+</html>
