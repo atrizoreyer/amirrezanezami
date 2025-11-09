@@ -32,10 +32,16 @@
         display: inline-block;
       }
 
+      /* make the SVG arrow inherit the button color on hover */
+      .case-back-btn .case-back-icon svg,
+      .case-back-btn .case-back-icon path {
+        transition: transform 180ms ease, stroke 180ms ease, fill 180ms ease;
+      }
+
       /* Compact/fixed state */
       .case-back-btn.compact {
         position: fixed;
-        top: 14px;
+        top: 20px; /* slightly lower so it's not flush with the top */
         left: 14px;
         padding: 0.45rem;
         background: rgba(255,255,255,0.95);
@@ -46,6 +52,18 @@
 
       .case-back-btn.compact span {
         display: none; /* hide the text in compact state */
+      }
+
+      /* Responsive: on tablet/mobile always hide the back text and lower the fixed button more */
+      @media (max-width: 1024px) {
+        /* keep the back text visible on initial load for tablet; it will still be hidden
+           when the button receives the .compact class after scrolling */
+        .case-back-btn.compact { top: 64px; left: 12px; }
+      }
+
+      @media (max-width: 768px) {
+        /* mobile: compact sits lower to avoid the sticky header and safe area */
+        .case-back-btn.compact { top: 72px; left: 12px; }
       }
 
       /* PDF button small icon spacing */
@@ -59,16 +77,15 @@
 <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
   <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between relative">
     <div class="text-lg font-semibold text-[#FE4D00]">
-      <a href="case-studies.html">Amirreza Nezami</a>
+      <a href="index.html" title="Home" class="hover:text-[#DB00AC] transition">Amirreza Nezami</a>
     </div>
     <nav class="hidden md:flex gap-10 text-sm text-gray-800 font-medium">
-      <a href="index.html#home" class="hover:text-[#DB00AC] transition">Home</a>
-      <a href="/case-studies.html" class="hover:text-[#DB00AC] transition">Case Studies</a>
-      <a href="/Selected-Projects.html" class="hover:text-[#DB00AC] transition">Selected Projects</a>
-      <a href="/experience.html" class="hover:text-[#DB00AC] transition">Experiences</a>
-      <a href="#contact" class="hover:text-[#DB00AC] transition">Contact</a>
+      <a href="index.html#home" class="hover:text-[#FE4D00] transition">Home</a>
+      <a href="/case-studies.html" class="hover:text-[#FE4D00] transition">Case Studies</a>
+      <a href="/Selected-Projects.html" class="hover:text-[#FE4D00] transition">Selected Projects</a>
+      <a href="/experience.html" class="hover:text-[#FE4D00] transition">Experiences</a>
+      <a href="#contact" class="hover:text-[#FE4D00] transition">Contact</a>
     </nav>
-    <a href="case-studies.html" class="md:hidden text-sm text-gray-800">Back</a>
   </div>
 </header>
 
@@ -78,12 +95,12 @@
 
   <!-- Floating Back button (placed before hero, top-left) -->
   <div class="mb-4">
-    <a href="case-studies.html" class="case-back-btn" id="caseBackBtn" aria-label="Back to Case Studies">
+    <a href="case-studies.html" class="case-back-btn hover:text-[#FE4D00]" id="caseBackBtn" aria-label="Back to Case Studies">
       <!-- left arrow icon -->
       <svg class="case-back-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M15 6L9 12L15 18" stroke="#111827" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M15 6L9 12L15 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-      <span class="text-sm">Back to Case Studies</span>
+      <span class="text-sm hover:text-[#FE4D00]">Back to Case Studies</span>
     </a>
   </div>
 
