@@ -18,7 +18,7 @@
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
-        color: #374151; /* gray-700 */
+        color: #ffffff; /* make back button text/icon white on dark page */
         background: transparent;
         padding: 0.35rem 0.6rem;
         border-radius: 9999px;
@@ -44,8 +44,9 @@
         top: 20px; /* slightly lower so it's not flush with the top */
         left: 14px;
         padding: 0.45rem;
-        background: rgba(255,255,255,0.95);
-        box-shadow: 0 6px 18px rgba(15,23,42,0.08);
+        /* use a translucent dark background so the white icon/text remain visible when compact */
+        background: rgba(0,0,0,0.55);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.45);
         border-radius: 9999px;
         z-index: 80;
       }
@@ -71,7 +72,7 @@
     </style>
   </head>
 
-  <body class="text-[#121212] bg-white relative overflow-x-hidden">
+  <body class="text-white bg-[#262326] relative overflow-x-hidden">
 
 <!-- ✅ Navbar -->
 <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
@@ -107,7 +108,7 @@
   <!-- Hero Section -->
   <header class="mb-10 text-center">
     <h1 class="text-4xl font-bold mb-3">Investor’s Edge – UX Redesign</h1>
-    <p class="text-gray-600 text-lg max-w-3xl mx-auto">
+    <p class="text-white text-lg max-w-3xl mx-auto">
       A redesign of CIBC’s trading platform focused on simplifying trade flows, improving clarity, and boosting user confidence.
     </p>
     <div class="mt-5 flex justify-center gap-4">
@@ -126,97 +127,141 @@
 
 
   <!-- Context Section -->
-  <section class="grid md:grid-cols-2 gap-6 bg-[#F5F6FA] rounded-xl p-6 mb-12">
-    <div>
-      <h3 class="font-semibold mb-2">Context</h3>
-      <p class="text-sm text-gray-700">
-        Investor’s Edge is CIBC’s self-directed trading platform for retail investors. The challenge was to make trade workflows simpler and reduce friction for everyday users.
-      </p>
+  <section class="grid md:grid-cols-2 gap-6 bg-[#262326] text-[#ffffff] rounded-xl p-6 mb-12 items-start md:items-center">
+    <!-- Text column: on mobile we show it first, on desktop it sits to the right (md:order-last) -->
+  <div class="order-first md:order-first space-y-3 md:space-y-20">
+      <div>
+        <h3 class="font-semibold mb-2 ">Context</h3>
+        <p class="text-sm">
+          Investor’s Edge is CIBC’s self-directed trading platform for retail investors. The challenge was to make trade workflows simpler and reduce friction for everyday users.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-semibold mb-2">Role</h3>
+        <p class="text-sm">
+          UX Designer
+        </p>
+      </div>
+            <div>
+        <h3 class="font-semibold mb-2">Duration</h3>
+        <p class="text-sm">
+          6-week sprint. Collaborated with Product Manager and Engineering team to redesign flow, improve IA, and validate usability improvements.
+        </p>
+      </div>
     </div>
-    <div>
-      <h3 class="font-semibold mb-2">Role & Duration</h3>
-      <p class="text-sm text-gray-700">
-        UX Designer — 6-week sprint. Collaborated with Product Manager and Engineering team to redesign flow, improve IA, and validate usability improvements.
-      </p>
+
+    <!-- Image column: on mobile show after text (order-last), centered and smaller; on desktop appear left and a bit larger -->
+    <div class="order-last md:order-last flex justify-center md:justify-start">
+      <img src="./assets/images/CaseStudy/investor/investor edge dashboard.jpeg" alt="Investor’s Edge dashboard wireframe" class="w-48 md:w-72 lg:w-80 rounded-lg shadow mt-3 object-cover" />
     </div>
   </section>
 
+    <hr class="border-0 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-12" />
 
 
   <!-- Problem -->
-  <section class="mb-12">
-    <h2 class="text-2xl font-semibold mb-3">Problem</h2>
-    <p class="text-gray-700 mb-4">
-      Users were getting lost during the trading process, making preventable mistakes. Key pain points included unclear CTAs, inconsistent states, and lack of trust in confirmation steps.
+
+  <section class="grid md:grid-cols-1 gap-6 bg-[#262326] text-[#ffffff] rounded-xl p-6 mb-12 items-start md:items-center">
+    <!-- Text column: on mobile we show it first, on desktop it sits to the right (md:order-last) -->
+  <div class="order-first md:order-first space-y-3">
+      <div>
+        <h3 class="font-semibold mb-2 ">Problem</h3>
+        <p class="text-sm">
+Users were getting lost during the trading process, making preventable mistakes. Key pain points included unclear CTAs, inconsistent states, and lack of trust in confirmation steps.
     </p>
-    <ul class="list-disc pl-5 text-gray-700 text-sm space-y-1">
+     <ul class="list-disc pl-5 text-white text-sm space-y-1">
       <li>Confusing terminology and redundant steps caused hesitation.</li>
       <li>Trade confirmation states weren’t visually distinct.</li>
       <li>Accessibility gaps (contrast, focus states) increased errors.</li>
-    </ul>
-  </section>
+    </ul>      </div>
 
 
-
-  <!-- Process -->
-  <section class="mb-12">
-    <h2 class="text-2xl font-semibold mb-6">Process</h2>
-
-    <div class="space-y-10">
-      <div>
-        <h3 class="font-semibold text-lg mb-2">1. Research & Insights</h3>
-        <p class="text-sm text-gray-700">
-          Conducted 5 usability tests and heuristic evaluations revealing confusion in trade review and confirmation steps. Mapped user journey to identify friction points.
-        </p>
-        <img src="./assets/images/CaseStudy/InvestorEdge_ResearchFindings.jpg" alt="Research Findings" class="w-full rounded-lg shadow mt-3">
-      </div>
-
-      <div>
-        <h3 class="font-semibold text-lg mb-2">2. Wireframes & Iteration</h3>
-        <p class="text-sm text-gray-700">
-          Simplified the trade flow into three clear stages: Input, Review, and Confirm. Reduced redundant modals and improved hierarchy for critical actions.
-        </p>
-        <img src="./assets/images/CaseStudy/InvestorEdge_Wireframe.jpg" alt="Wireframe Sketch" class="w-full rounded-lg shadow mt-3">
-      </div>
-
-      <div>
-        <h3 class="font-semibold text-lg mb-2">3. Visual Design & Testing</h3>
-        <p class="text-sm text-gray-700">
-          Applied CIBC’s design system, improved focus states, and polished typography for better scannability. Tested prototype with 6 participants.
-        </p>
-        <img src="./assets/images/CaseStudy/InvestorEdge_UI.jpg" alt="Final UI Design" class="w-full rounded-lg shadow mt-3">
-      </div>
+    <!-- Image column: on mobile show after text (order-last), centered and smaller; on desktop appear left and a bit larger -->
+      <img class="order-last md:order-last flex justify-center md:justify-start" src="./assets/images/CaseStudy/investor/research 2.jpg" alt="Investor’s Edge dashboard wireframe" class="w-48 md:w-72 lg:w-80 rounded-lg shadow mt-3 object-cover" />
     </div>
   </section>
+
+
+
+
+    <hr class="border-0 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-12" />
+
+
+  <!-- Research & Insights -->
+
+  <section class="grid md:grid-cols-1 bg-[#262326] text-[#ffffff] rounded-xl p-6 mb-12 items-start md:items-center">
+    <!-- Text column: on mobile we show it first, on desktop it sits to the right (md:order-last) -->
+  <div class="order-first md:order-first space-y-3">
+      <div>
+        <h3 class="font-semibold mb-2 ">Research & Insights</h3>
+        <p class="text-sm">
+I conducted stakeholder interviews, heuristic reviews, and usability testing to identify key friction points. 
+Then I redesigned the process into three simple stages — Input, Review, and Confirm — with clear feedback at each step.        </p>
+      </div>
+
+
+    <!-- Image column: on mobile show after text (order-last), centered and smaller; on desktop appear left and a bit larger -->
+      <img class="order-last md:order-last flex justify-center md:justify-start" src="./assets/images/CaseStudy/investor/research.jpg" alt="Investor’s Edge dashboard wireframe" class="w-48 md:w-72 lg:w-80 rounded-lg shadow mt-3 object-cover" />
+    </div>
+  </section>
+
+
+    <hr class="border-0 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-12" />
+
 
 
 
   <!-- Outcome -->
-  <section class="mb-12">
-    <h2 class="text-2xl font-semibold mb-3">Outcome</h2>
-    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+
+  <section class="grid md:grid-cols-1 bg-[#262326] text-[#ffffff] rounded-xl p-6 mb-12 items-start md:items-center">
+    <!-- Text column: on mobile we show it first, on desktop it sits to the right (md:order-last) -->
+  <div class="order-first md:order-first space-y-3">
+      <div>
+        <h3 class="font-semibold mb-2 ">Outcome</h3>
+        <p class="text-sm">
+Good UX isn’t about adding features, it’s about building clarity and trust — especially in high-stakes tools like trading platforms.
+    </p>
+     <ul class="list-disc pl-5 text-white text-sm space-y-1">
       <li>✅ 25% faster task completion during trade flow testing.</li>
       <li>✅ Significant drop in user errors across trade confirmation steps.</li>
       <li>✅ Improved user trust with clearer visual feedback and accessibility compliance.</li>
     </ul>
-    <p class="text-gray-700 mt-4">
+    <p class="text-white mt-4">
       The redesign turned a stressful, complex process into a predictable and user-friendly experience. One tester described it as
       <em>"more intuitive and less intimidating to trade with."</em>
     </p>
-  </section>
+  </div>
 
 
-
-  <!-- Gallery -->
-  <section class="space-y-6 mb-12">
-    <h2 class="text-2xl font-semibold">Screens</h2>
-    <div class="grid md:grid-cols-3 gap-4">
-      <img src="./assets/images/CaseStudy/InvestorEdge_Before.jpg" alt="Before" class="rounded-lg shadow object-cover">
-      <img src="./assets/images/CaseStudy/InvestorEdge_After.jpg" alt="After" class="rounded-lg shadow object-cover">
-      <img src="./assets/images/CaseStudy/InvestorEdge_Responsive.jpg" alt="Responsive View" class="rounded-lg shadow object-cover">
+    <!-- Image column: on mobile show after text (order-last), centered and smaller; on desktop appear left and a bit larger -->
+      <img class="order-last md:order-last flex justify-center md:justify-start" src="./assets/images/CaseStudy/investor/research.jpg" alt="Investor’s Edge dashboard wireframe" class="w-48 md:w-72 lg:w-80 rounded-lg shadow mt-3 object-cover" />
     </div>
   </section>
 
+
+    <hr class="border-0 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-12" />
+
+
+  <!-- accessibility -->
+
+  <section class="grid md:grid-cols-1 gap-6 bg-[#262326] text-[#ffffff] rounded-xl p-6 mb-12 items-start md:items-center">
+    <!-- Text column: on mobile we show it first, on desktop it sits to the right (md:order-last) -->
+  <div class="order-first md:order-first space-y-3">
+      <div>
+        <h3 class="font-semibold mb-2 ">Accessibility
+</h3>
+        <p class="text-sm">
+Good UX isn’t about adding features, it’s about building clarity and trust — especially in high-stakes tools like trading platforms.
+    </p>
+
+  </div>
+
+
+    <!-- Image column: on mobile show after text (order-last), centered and smaller; on desktop appear left and a bit larger -->
+      <img class="order-last md:order-last flex justify-center md:justify-start" src="./assets/images/CaseStudy/investor/research.jpg" alt="Investor’s Edge dashboard wireframe" class="w-48 md:w-72 lg:w-80 rounded-lg shadow mt-3 object-cover" />
+    </div>
+  </section>
 
 
   <!-- CTA -->
