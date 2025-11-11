@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Investor’s Edge – Case Study | Amirreza Nezami</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Saira+Semi+Condensed:wght@400;700&display=swap');
+      body { font-family: 'Bai Jamjuree', sans-serif; background-color: #ffffff; }
+      h1,h2,h3 { font-family: 'Saira Semi Condensed', sans-serif; }
+
+      /* Back button that collapses to icon-only when user scrolls */
+      .case-back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #ffffff; /* make back button text/icon white on dark page */
+        background: transparent;
+        padding: 0.35rem 0.6rem;
+        border-radius: 9999px;
+        transition: all 200ms ease;
+        text-decoration: none;
+      }
+
+      .case-back-btn .case-back-icon {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+      }
+
+      /* make the SVG arrow inherit the button color on hover */
+      .case-back-btn .case-back-icon svg,
+      .case-back-btn .case-back-icon path {
+        transition: transform 180ms ease, stroke 180ms ease, fill 180ms ease;
+      }
+
+      /* Compact/fixed state */
+      .case-back-btn.compact {
+        position: fixed;
+        top: 20px; /* slightly lower so it's not flush with the top */
+        left: 14px;
+        padding: 0.45rem;
+        /* use a translucent dark background so the white icon/text remain visible when compact */
+        background: rgba(0,0,0,0.55);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+        border-radius: 9999px;
+        z-index: 80;
+      }
+
+      .case-back-btn.compact span {
+        display: none; /* hide the text in compact state */
+      }
+
+      /* Responsive: on tablet/mobile always hide the back text and lower the fixed button more */
+      @media (max-width: 1024px) {
+        /* keep the back text visible on initial load for tablet; it will still be hidden
+           when the button receives the .compact class after scrolling */
+        .case-back-btn.compact { top: 64px; left: 12px; }
+      }
+
+      @media (max-width: 768px) {
+        /* mobile: compact sits lower to avoid the sticky header and safe area */
+        .case-back-btn.compact { top: 72px; left: 12px; }
+      }
+
+      /* PDF button small icon spacing */
+      .pdf-btn svg.pdf-icon { width: 18px; height: 18px; margin-right: 0.5rem; flex-shrink:0 }
+    </style>
+  </head>
+
+  <body class="text-white bg-[#262326] relative overflow-x-hidden">
+
+<!-- ✅ Navbar -->
+<header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between relative">
+    <div class="text-lg font-semibold text-[#FE4D00]">
+      <a href="index.html" title="Home" class="hover:text-[#DB00AC] transition">Amirreza Nezami</a>
+    </div>
+    <nav class="hidden md:flex gap-10 text-sm text-gray-800 font-medium">
+      <a href="index.html#home" class="hover:text-[#FE4D00] transition">Home</a>
+      <a href="/case-studies.html" class="hover:text-[#FE4D00] transition">Case Studies</a>
+      <a href="/Selected-Projects.html" class="hover:text-[#FE4D00] transition">Selected Projects</a>
+      <a href="/experience.html" class="hover:text-[#FE4D00] transition">Experiences</a>
+      <a href="#contact" class="hover:text-[#FE4D00] transition">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+<!-- ✅ Main Case Study Content -->
+<main class="max-w-5xl mx-auto px-6 md:px-12 py-12">
+
+  <!-- Floating Back button (placed before hero, top-left) -->
+  <div class="mb-4">
+    <a href="case-studies.html" class="case-back-btn hover:text-[#FE4D00]" id="caseBackBtn" aria-label="Back to Case Studies">
+      <!-- left arrow icon -->
+      <svg class="case-back-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M15 6L9 12L15 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="text-sm hover:text-[#FE4D00]">Back to Case Studies</span>
+        </a>
+      </div>
+
+      <!-- Hero Section -->
+      <header class="mb-10 text-center">
+        <h1 class="text-4xl font-bold mb-3">Investor's Edge – UX Redesign</h1>
+        <p class="text-white text-lg max-w-3xl mx-auto">
+      Redesigning <strong class="text-[#FFB74D]">CIBC</strong>'s trading platform to make trading simpler, clearer, and more confident.
+        </p>
+        <div class="mt-5 flex justify-center gap-4">
+      <!-- PDF button with red PDF icon and tooltip/title -->
+      <a href="./assets/images/CaseStudy/Amirreza Nezami - Case study - Investor's Edge UX Redesign.pdf" target="_blank" rel="noopener noreferrer" class="pdf-btn inline-flex items-center text-sm bg-[#DB00AC] text-white px-4 py-2 rounded-md hover:opacity-90 transition" title="Download full case study (PDF)" aria-label="Download full case study PDF (opens in new tab)">
+        <svg class="pdf-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true">
+          <title>PDF</title>
+          <rect x="2" y="3" width="20" height="18" rx="2" fill="#DC2626" />
+          <text x="12" y="15.5" text-anchor="middle" font-size="8.5" font-family="Arial, Helvetica, sans-serif" fill="#ffffff">PDF</text>
+        </svg>
+        <span>View Full PDF Case Study</span>
+      </a>
+    </div>
+  </header>
+
+
+
+  <!-- Context Section -->
+  <section class="grid md:grid-cols-2 gap-6 bg-[#262326] text-[#ffffff] rounded-xl p-6 mb-12 items-start md:items-center">
+    <!-- Text column: on mobile we show it first, on desktop it sits to the right (md:order-last) -->
+  <div class="order-first md:order-first space-y-3 md:space-y-20">
+      <div>
+        <h3 class="font-semibold mb-2 ">Context</h3>
+        <p class="text-sm">
+          <strong class="text-[#FFB74D]">Investor’s Edge</strong> is CIBC’s self-directed trading platform for retail investors. The challenge was to make trade workflows simpler and reduce friction for everyday users.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-semibold mb-2">Role</h3>
+        <p class="text-sm">
+          <strong class="text-[#FFB74D]">UX Designer</strong> — Led end-to-end UX redesign, from research and wireframing to prototyping and usability testing.
+        </p>
+      </div>
+            <div>
+        <h3 class="font-semibold mb-2">Duration</h3>
+        <p class="text-sm">
+          <strong class="text-[#FFB74D]">6-week sprint</strong>. Collaborated with Product Manager and Engineering team to redesign flow, improve IA, and validate usability improvements.
+        </p>
+      </div>
+    </div>
+
+    <!-- Image column: on mobile show after text (order-last), centered and smaller; on desktop appear left and a bit larger -->
+    <div class="order-last md:order-last flex justify-center md:justify-start">
+      <img src="./assets/images/CaseStudy/investor/investor edge dashboard.jpeg" alt="Investor’s Edge dashboard wireframe" class="w-48 md:w-72 lg:w-80 rounded-lg shadow mt-3 object-cover" />
+    </div>
+  </section>
+
+    <hr class="border-0 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-12" />
+
+
+  <!-- Problem -->
+
+  <section class="grid md:grid-cols-1 gap-6 bg-[#262326] text-[#ffffff] rounded-xl p-6 mb-12 items-start md:items-center">
+    <!-- Text column: on mobile we show it first, on desktop it sits to the right (md:order-last) -->
+  <div class="order-first md:order-first space-y-12">
+      <div>
+        <h3 class="font-semibold mb-2 ">Problem</h3>
+        <p class="text-sm">
+Users were getting lost during the trading process, making preventable mistakes. Key pain points included <strong class="text-[#FFB74D]">unclear CTAs</strong>, inconsistent states, and lack of trust in confirmation steps.
+    </p>
+     <ul class="list-disc pl-5 text-white text-sm space-y-1">
+      <li>Confusing terminology and redundant steps caused hesitation.</li>
+      <li>Trade confirmation states weren’t visually distinct.</li>
+      <li><strong class="text-[#FFB74D]">Accessibility gaps</strong> (contrast, focus states) increased errors.</li>
+      <li><strong class="text-[#FFB74D]">Inconsistent</strong> field patterns and visual hierarchy caused hesitation and errors.</li>
+    </ul>      </div>
+
+
+    <!-- Image column: on mobile show after text (order-last), centered and smaller; on desktop appear left and a bit larger -->
+      <img class="order-last md:order-last flex justify-center md:justify-start" src="./assets/images/CaseStudy/investor/problem.png" alt="Investor’s Edge dashboard wireframe" class="w-48 md:w-72 lg:w-80 rounded-lg shadow mt-3 object-cover" />
+    </div>
+  </section>
+
+
+
+
+    <hr class="border-0 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-12" />
+
+
+  <!-- Research & Insights -->
+
+  <section class="grid md:grid-cols-1 bg-[#262326] text-[#ffffff] rounded-xl p-6 mb-12 items-start md:items-center">
+    <!-- Text column: on mobile we show it first, on desktop it sits to the right (md:order-last) -->
+  <div class="order-first md:order-first space-y-12">
+      <div>
+        <h3 class="font-semibold mb-2 ">Research & Insights</h3>
+        <p class="text-sm">
+        I conducted <strong class="text-[#FFB74D]">stakeholder interviews</strong>, <strong class="text-[#FFB74D]">heuristic reviews</strong>, and <strong class="text-[#FFB74D]">usability testing</strong> to identify key friction points. 
+        Then I redesigned the process into three simple stages — Input, Review, and Confirm — with clear feedback at each step.
+       </p>
+  <p class="text-sm">
+  To compare real customer support experiences, I analyzed chat interactions across <strong class="text-[#FFB74D]">CIBC</strong> and <strong class="text-[#FFB74D]">TD</strong> to uncover usability and accessibility gaps.
+       </p>
+      </div>
+
+
+    <!-- Image column: on mobile show after text (order-last), centered and smaller; on desktop appear left and a bit larger -->
+      <img class="order-last md:order-last flex justify-center md:justify-start" src="./assets/images/CaseStudy/investor/research 2.jpg" alt="Investor’s Edge dashboard wireframe" class="w-48 md:w-72 lg:w-80 rounded-lg shadow mt-3 object-cover" />
+    </div>
+  </section>
+
+
+    <hr class="border-0 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-12" />
+
+
+
+
+  <!-- Outcome -->
+
+  <section class="grid md:grid-cols-1 bg-[#262326] text-[#ffffff] rounded-xl p-6 mb-12 items-start md:items-center">
+    <!-- Text column: on mobile we show it first, on desktop it sits to the right (md:order-last) -->
+  <div class="order-first md:order-first space-y-12">
+      <div>
+        <h3 class="font-semibold mb-2 ">Outcome</h3>
+        <p class="text-sm">
+Good UX isn’t about adding features, it’s about building clarity and trust — especially in high-stakes tools like trading platforms.
+    </p>
+     <ul class="list-disc pl-5 text-white text-sm space-y-1">
+      <li>✅ <strong class="text-[#FFB74D]">25% faster task completion</strong> during trade flow testing.</li>
+      <li>✅ Significant <strong class="text-[#FFB74D]">drop in user errors</strong> across trade confirmation steps.</li>
+      <li>✅ <strong class="text-[#FFB74D]">Improved user trust</strong> with clearer visual feedback and accessibility compliance.</li>
+      <li>✅ To enhance perceived responsiveness, I added a subtle typing animation to <strong class="text-[#FFB74D]">simulate live chat feedback</strong>.</li>
+    </ul>
+    <p class="text-white mt-4">
+      The redesign turned a stressful, complex process into a predictable and user-friendly experience. One tester described it as
+      <em>"more intuitive and less intimidating to trade with."</em>
+    </p>
+  </div>
+
+
+    <!-- Image column: on mobile show after text (order-last), centered and smaller; on desktop appear left and a bit larger -->
+      <img class="order-last md:order-last flex justify-center md:justify-start" src="./assets/images/CaseStudy/investor/Outcome 1.png" alt="Investor’s Edge dashboard wireframe" class="w-48 md:w-72 lg:w-80 rounded-lg shadow mt-3 object-cover" />
+    </div>
+      </div>
+
+
+    <!-- Image column: on mobile show after text (order-last), centered and smaller; on desktop appear left and a bit larger -->
+      <img class="order-last md:order-last flex justify-center md:justify-start" src="./assets/images/CaseStudy/investor/Outcome 2.png" alt="Investor’s Edge dashboard wireframe" class="w-48 md:w-72 lg:w-80 rounded-lg shadow mt-3 object-cover" />
+    </div>
+  </section>
+
+
+    <hr class="border-0 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-12" />
+
+
+  <!-- accessibility -->
+
+  <section class="grid md:grid-cols-1 gap-6 bg-[#262326] text-[#ffffff] rounded-xl p-6 mb-12 items-start md:items-center">
+    <!-- Text column: on mobile we show it first, on desktop it sits to the right (md:order-last) -->
+  <div class="order-first md:order-first space-y-12">
+      <div>
+        <h3 class="font-semibold mb-2 ">Accessibility Validation
+</h3>
+        <p class="text-sm">
+        Accessibility wasn’t an afterthought. I validated the final design with <strong class="text-[#FFB74D]">WAVE</strong> and <strong class="text-[#FFB74D]">NVDA</strong>, identifying <strong class="text-[#FFB74D]">missing labels</strong> and improving <strong class="text-[#FFB74D]">color contrast</strong> for better compliance.
+      </p>
+
+  </div>
+
+
+    <!-- Image column: on mobile show after text (order-last), centered and smaller; on desktop appear left and a bit larger -->
+      <img class="order-last md:order-last flex justify-center md:justify-start" src="./assets/images/CaseStudy/investor/Accessibility.jpg" alt="Investor’s Edge dashboard wireframe" class="w-48 md:w-72 lg:w-80 rounded-lg shadow mt-3 object-cover" />
+    </div>
+  </section>
+
+
+  <!-- CTA -->
+    <div class="mt-5 flex justify-center gap-4">
+      <!-- PDF button with red PDF icon and tooltip/title -->
+      <a href="./assets/images/CaseStudy/Amirreza Nezami - Case study - Investor’s Edge UX Redesign.pdf" target="_blank" rel="noopener noreferrer" class="pdf-btn inline-flex items-center text-sm bg-[#DB00AC] text-white px-4 py-2 rounded-md hover:opacity-90 transition" title="Download full case study (PDF)" aria-label="Download full case study PDF (opens in new tab)">
+        <svg class="pdf-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true">
+          <title>PDF</title>
+          <rect x="2" y="3" width="20" height="18" rx="2" fill="#DC2626" />
+          <text x="12" y="15.5" text-anchor="middle" font-size="8.5" font-family="Arial, Helvetica, sans-serif" fill="#ffffff">PDF</text>
+        </svg>
+        <span>View Full PDF Case Study</span>
+      </a>
+    </div>
+
+</main>
+
+
+
+  <footer id="contact" class="bg-black px-6 md:px-12 py-16 text-[#F5F6FA]">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+    <!-- Text Section -->
+    <div>
+      <h2 class="text-3xl font-bold mb-4 text-white">Get in touch</h2>
+      <h3 class="text-xl font-semibold mb-2">Amirreza Nezami</h3>
+      <p class="text-[#D1D5DB] mb-4">I'd love to hear from you. Let's chat about your design needs and ideas.</p>
+
+      <div class="mb-4">
+        <p class="text-sm font-medium text-[#E5E7EB] mb-1">📧 Send me an email</p>
+        <p class="text-[#D1D5DB]">amirreza.nezami28@gmail.com</p>
+        <p class="text-[#D1D5DB]">design.druiux@gmail.com</p>
+
+      </div>
+
+      <div class="mb-4">
+        <p class="text-sm font-medium text-[#E5E7EB] mb-1">📞 Give me a call</p>
+        <p class="text-[#D1D5DB]">+1 (647) 741-2890</p>
+        <p class="text-gray-400 text-sm">I'm available Monday to Friday, 9am to 5pm.</p>
+      </div>
+
+      <a href="https://www.linkedin.com/in/amirreza-nezami" target="_blank" rel="noopener noreferrer" title="Open LinkedIn profile (opens in new tab)" aria-label="Open LinkedIn profile of Amirreza Nezami (opens in new tab)" class="inline-block mt-2 text-[#FE4D00] font-medium hover:underline">
+        💼 Connect on LinkedIn
+      </a>
+    <div class="mt-8 flex flex-wrap gap-4">
+      <a href="./assets/images/Amirreza Nezami – UX_UI Designer – Resume.pdf" target="_blank" rel="noopener noreferrer"
+        class="bg-[#DB00AC] text-white px-6 py-2 rounded-xl text-sm hover:opacity-90 transition"
+           aria-label="Download Resume as PDF (opens in new tab)" title="Download resume (opens in new tab)">
+
+        Download Resume
+      </a>
+
+    </div>
+      <p class="mt-8 text-lg font-semibold text-white">Let’s make something great together! 🚀</p>
+    </div>
+
+    <!-- Image Section -->
+    <div class="flex justify-center md:justify-end">
+      <img src="./assets/images/pic/Amirreza Nezami.jpeg" alt="Amirreza Nezami" class="w-72 h-auto rounded-2xl shadow-lg object-cover">
+    </div>
+
+  </div>
+</footer>
+
+<!-- Scroll behaviour script: collapse back button to icon-only after scrolling past header -->
+<script>
+  (function(){
+    const backBtn = document.getElementById('caseBackBtn');
+    if(!backBtn) return;
+    const compactThreshold = 120; // pixels scrolled before collapsing
+    function onScroll(){
+      if(window.pageYOffset > compactThreshold){
+        backBtn.classList.add('compact');
+      } else {
+        backBtn.classList.remove('compact');
+      }
+    }
+    // initial check
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  })();
+</script>
+
+</body>
+</html>
