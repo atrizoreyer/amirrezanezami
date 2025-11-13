@@ -17,6 +17,7 @@
       h1, h2, h3 {
         font-family: 'Saira Semi Condensed', sans-serif;
       }
+      
     </style>
   </head>
   <body class="text-[#121212] bg-white relative overflow-x-hidden">
@@ -301,7 +302,177 @@
   </div>
 </section>
 
-<h2 class="text-3xl font-bold text-center mt-16 mb-10">Selected Case Studies & Projects</h2>
+
+
+
+
+
+<section class="py-20 px-6 md:px-12 bg-white relative overflow-hidden" id="achievement-cards">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-[#121212] mb-4">
+      🏆 Design Achievements Unlocked: Key Case Studies
+    </h2>
+    <p class="text-gray-600 mb-10 max-w-2xl mx-auto">
+      Discover the impact of data-driven UX decisions across my featured projects. Each study highlights measurable results and strategic problem-solving.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 justify-center">
+
+      <a href="/Simplii Login Page Redesign.html" target="_blank" 
+         class="achievement-card group block relative transition-all duration-300 ease-in-out hover:z-40 
+                rounded-xl shadow-xl hover:shadow-2xl h-[350px] overflow-hidden text-left
+                transform rotate-[-3deg] md:hover:rotate-0 md:hover:-translate-y-4">
+        
+        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" 
+             style="background-image: url('./assets/images/Simplii-preview.avif');"> 
+        </div>
+
+        <div class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-colors"></div>
+
+        <div class="relative h-full p-6 md:p-8 flex flex-col justify-end text-white">
+            <h3 class="text-2xl font-bold mb-1 group-hover:underline">Simplii Login Page Redesign</h3>
+            <p class="text-base font-medium mb-3">Rewrote copy for clarity and friendliness across login flow, maximizing user ease.</p>
+            <p class="text-sm font-light italic opacity-90">Impact: Increased task success by 35%.</p>
+            <span class="absolute top-4 right-4 text-xs font-semibold px-2 py-1 rounded-full bg-white text-gray-900">UX Writing | Accessibility</span>
+        </div>
+      </a>
+
+      <a href="/maplefi.html" target="_blank" 
+         class="achievement-card group block relative transition-all duration-300 ease-in-out hover:z-40 
+                rounded-xl shadow-xl hover:shadow-2xl h-[350px] overflow-hidden text-left
+                transform rotate-0 md:hover:-translate-y-4">
+        
+        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" 
+             style="background-image: url('./assets/images/MapleFi-preview.avif');"> 
+        </div>
+
+        <div class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-colors"></div>
+
+        <div class="relative h-full p-6 md:p-8 flex flex-col justify-end text-white">
+            <h3 class="text-2xl font-bold mb-1 group-hover:underline">MapleFi – AI-Driven Finance Redesign</h3>
+            <p class="text-base font-medium mb-3">AI assistant “Nura” helped users streamline complex financial tasks and navigation.</p>
+            <p class="text-sm font-light italic opacity-90">Impact: 45% faster task completion & 30% satisfaction boost.</p>
+            <span class="absolute top-4 right-4 text-xs font-semibold px-2 py-1 rounded-full bg-white text-gray-900">AI UX | Fintech</span>
+        </div>
+      </a>
+
+      <a href="/investor's-edge.html" target="_blank" 
+         class="achievement-card group block relative transition-all duration-300 ease-in-out hover:z-40 
+                rounded-xl shadow-xl hover:shadow-2xl h-[350px] overflow-hidden text-left
+                transform rotate-[2deg] md:hover:rotate-0 md:hover:-translate-y-4">
+        
+        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" 
+             style="background-image: url('./assets/images/InvestorsEdge-preview.avif');"> 
+        </div>
+
+        <div class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-colors"></div>
+
+        <div class="relative h-full p-6 md:p-8 flex flex-col justify-end text-white">
+            <h3 class="text-2xl font-bold mb-1 group-hover:underline">Investor’s Edge UX Redesign</h3>
+            <p class="text-base font-medium mb-3">Simplified trade flow and dashboard clarity to foster user trust and confidence in investing.</p>
+            <p class="text-sm font-light italic opacity-90">Impact: 25% higher success rates during usability testing.</p>
+            <span class="absolute top-4 right-4 text-xs font-semibold px-2 py-1 rounded-full bg-white text-gray-900">Information Arch. | Fintech</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const projectContents = document.querySelectorAll('.project-content');
+    
+    // Function to set the active state
+    const setActiveTab = (selectedProject) => {
+      // 1. Hide all content and reset button styles
+      projectContents.forEach(content => {
+        content.classList.add('hidden');
+      });
+      tabButtons.forEach(button => {
+        button.classList.remove('bg-[#F5F6FA]', 'border-[#DB00AC]');
+        button.classList.add('border-gray-200');
+      });
+
+      // 2. Show the selected content and update button style
+      const activeContent = document.getElementById(`content-${selectedProject}`);
+      const activeButton = document.querySelector(`.tab-button[data-project="${selectedProject}"]`);
+
+      if (activeContent) {
+        activeContent.classList.remove('hidden');
+      }
+      if (activeButton) {
+        activeButton.classList.add('bg-[#F5F6FA]', 'border-[#DB00AC]');
+        activeButton.classList.remove('border-gray-200');
+      }
+    };
+
+    // Initialize the first tab as active
+    setActiveTab('maplefi'); 
+
+    // Add click listeners to buttons
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const projectKey = button.getAttribute('data-project');
+        setActiveTab(projectKey);
+      });
+    });
+  });
+
+
+  
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <section id="story" class="px-6 md:px-12 py-16 text-center bg-[#F5F6FA]">
   <h2 class="text-3xl font-bold mb-6">🎬 My Journey into UX Design</h2>
