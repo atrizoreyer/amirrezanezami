@@ -75,7 +75,7 @@
   <body class="text-white bg-[#262326] relative overflow-x-hidden">
 
 <!-- ✅ Navbar -->
-<header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+<header class="sticky top-0 z-[90] bg-white/80 backdrop-blur-md shadow-sm">
   <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between relative">
     <div class="text-lg font-semibold text-[#FE4D00]">
       <a href="index.html" title="Home" class="hover:text-[#DB00AC] transition">Amirreza Nezami</a>
@@ -87,8 +87,82 @@
       <a href="/experience.html" class="hover:text-[#FE4D00] transition">Experiences</a>
       <a href="#contact" class="hover:text-[#FE4D00] transition">Contact</a>
     </nav>
+
+        <!-- Menu Toggle Button -->
+<button id="menu-toggle" 
+        class="md:hidden text-[#DB00AC] focus:outline-none z-50 relative"
+        aria-label="Toggle mobile menu">
+  <!-- Hamburger Icon-->
+  <svg id="menu-icon" class="w-6 h-6 block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+  </svg>
+  
+  <!-- X Icon-->
+  <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+  </svg>
+</button>
+  </div>
+
+
+
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden bg-white/90 backdrop-blur-md shadow-md max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+    <nav class="px-6 py-4 flex flex-col gap-4 text-gray-800 font-medium">
+      <a href="index.html#home" class="hover:text-[#FE4D00] transition">Home</a>
+      <a href="/case-studies.html" class="hover:text-[#FE4D00] transition">Case Studies</a>
+      <a href="/Selected-Projects.html" class="hover:text-[#FE4D00] transition">Selected Projects</a>
+      <a href="/experience.html" class="hover:text-[#FE4D00] transition">Experiences</a>
+      <a href="#contact" class="hover:text-[#FE4D00] transition">Contact</a>
+    </nav>
   </div>
 </header>
+
+
+<!-- ✅ JavaScript for Mobile Menu -->
+<script>
+  const toggleBtn = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('menu-icon');
+  const closeIcon = document.getElementById('close-icon');
+  const mobileLinks = document.querySelectorAll('.mobile-link');
+
+  let isMenuOpen = false;
+
+  function toggleMenu(state) {
+    isMenuOpen = state !== undefined ? state : !isMenuOpen;
+
+    if (isMenuOpen) {
+      mobileMenu.classList.remove('max-h-0', 'py-0');
+      mobileMenu.classList.add('max-h-[300px]', 'py-4');
+      menuIcon.classList.add('hidden');
+      closeIcon.classList.remove('hidden');
+    } else {
+      mobileMenu.classList.remove('max-h-[300px]', 'py-4');
+      mobileMenu.classList.add('max-h-0', 'py-0');
+      menuIcon.classList.remove('hidden');
+      closeIcon.classList.add('hidden');
+    }
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    toggleMenu();
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (event) => {
+    const isClickInside = toggleBtn.contains(event.target) || mobileMenu.contains(event.target);
+    if (!isClickInside && isMenuOpen) {
+      toggleMenu(false);
+    }
+  });
+
+  // Close menu when clicking on a link
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => toggleMenu(false));
+  });
+</script>
 
 
 <!-- ✅ Main Case Study Content -->
